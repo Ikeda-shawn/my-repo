@@ -3,9 +3,11 @@ on: push
 jobs:
   print:
     runs-on: ubuntu-latest
-    env:
-      LITERAL_NULL: ${{ null }}
-      LITERAL_BOOLEAN: ${{ true }}
-      LITERAL_NUMBER: ${{ 1234 }}
-      LITERAL_STRING: ${{ 'hello' }}
-      LITERAL_OMIT_STRING_: world
+    steps:
+      - runs: printenv | grep 'LITERAL_'
+        env:
+          LITERAL_NULL: ${{ null }}
+          LITERAL_BOOLEAN: ${{ true }}
+          LITERAL_NUMBER: ${{ 1234 }}
+          LITERAL_STRING: ${{ 'hello' }}
+          LITERAL_OMIT_STRING_: world
