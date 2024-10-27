@@ -3,6 +3,6 @@ on: push
 jobs:
   share:
     runs-on: ubuntu-latest
-  steps:
-    - run: echo "result=hello" >> "${GITHUB_ENV}"
-    - run: echo "${result}"
+    steps:
+      - run: echo "result=hello" >> "${GITHUB_ENV}"
+      - run: echo "${result}"
