@@ -8,4 +8,4 @@ jobs:
       run: echo "result=hello" >> "${github_output}"
     - env:
         result: ${{ steps.source.outputs.result }}
-      runs: echo ${{result}}
+      runs: echo ${result}
