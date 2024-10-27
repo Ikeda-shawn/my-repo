@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
   steps:
     - run: echo "result=hello" >> "${GITHUB_ENV}"
-    - run: echo ${result}
+    - run: echo "${result}"
