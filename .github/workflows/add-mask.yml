@@ -1,0 +1,10 @@
+name: add mask
+on: push
+jobs:
+    log:
+        runs-on: ubuntu-latest
+        env:
+            PASSWORD: PASSWORD
+        steps:
+            - run: echo "::add-mask::${PASSWORD}"
+            - run: echo "${PASSWORD}"
